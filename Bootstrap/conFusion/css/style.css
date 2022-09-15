@@ -36,4 +36,8 @@ body{
 .navbar-dark {
     background-color: #512DA8;
 }
-    
+   
+span.fa {
+    width: 26px;
+    text-align: center;
+}

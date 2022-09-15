@@ -1,0 +1,9 @@
+.form-group .btn-primary {
+    margin-left: 160px;
+}
+
+@media (max-width: 708px) {
+    .form-group .btn-primary {
+        margin-left: 10px;
+    }
+}
