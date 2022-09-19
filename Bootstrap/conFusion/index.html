@@ -25,7 +25,7 @@
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index.css" />
     <title>Ristorante Con Fusion</title>
   </head>
 
@@ -68,13 +68,79 @@
               >
             </li>
           </ul>
+          <span class="navbar-text">
+            <a data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span> Login</a
+            >
+          </span>
         </div>
       </div>
     </nav>
+
+    <!-- Modal -->
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputEmail3"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputEmail3"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputPassword3"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputPassword3"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="col-sm-auto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" />
+                    <label class="form-check-label"> Remember me </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm ml-auto"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">
+                  Sign in
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
-          <div class="col-12 col-sm-6">
+          <div class="col-md-4 col-sm-6">
             <h1>Ristorante con Fusion</h1>
             <p>
               We take inspiration from the World's best cuisines, and create a
@@ -82,13 +148,22 @@
               your culinary senses!
             </p>
           </div>
-          <div class="col-12 col-sm-6 align-self-center">
+          <div class="col-md-4 col-sm-6 align-self-center">
             <img src="img/logo.png" class="img-fluid" />
           </div>
-          <div class="col-12 col-sm-6 align-self-center">
+          <div class="col-md-4 col-sm-6 align-self-center">
             <button type="button" class="btn btn-warning pr-4 pl-4">
-              Reserver Table
-            </button>  
+              <a
+                role="button"
+                class="btn btn-block nav-link btn-warning"
+                data-toggle="tooltip"
+                data-html="true"
+                title="Or Call us at  <br><strong>+852 12345678</strong>"
+                data-placement="bottom"
+                href="#reserveform"
+                >Reserve Table</a
+              >
+            </button>
           </div>
         </div>
       </div>
@@ -128,17 +203,16 @@
         </div>
         <div class="col col-sm col-md">
           <div class="media">
-
             <div class="media-body">
               <h2 class="mt-0">
                 Weekend Grand Buffet
                 <span class="badge badge-danger">NEW</span>
               </h2>
               <p class="d-none d-sm-block">
-                Featuring mouthwatering combinations with a choice of five different
-                salads, six enticing appetizers, six main entrees and five choicest
-                desserts. Free flowing bubbly and soft drinks. All for just $19.99
-                per person
+                Featuring mouthwatering combinations with a choice of five
+                different salads, six enticing appetizers, six main entrees and
+                five choicest desserts. Free flowing bubbly and soft drinks. All
+                for just $19.99 per person
               </p>
             </div>
             <img
@@ -179,7 +253,7 @@
       </div>
 
       <div class="row row-content align-items-center justify-content-center">
-        <form class="border rounded" style="overflow: hidden;">
+        <form class="border rounded" style="overflow: hidden">
           <div class="bg-warning">
             <h3 class="text-white p-2">Reserver a Table</h3>
           </div>
@@ -260,9 +334,7 @@
             </div>
           </div>
           <div class="form-group">
-            <button type="button" class="btn btn-primary">
-              Resever
-            </button>
+            <button type="button" class="btn btn-primary">Resever</button>
           </div>
         </form>
       </div>
@@ -333,4 +405,9 @@
       </div>
     </footer>
   </body>
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
 </html>
