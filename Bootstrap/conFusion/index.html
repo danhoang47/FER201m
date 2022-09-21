@@ -24,8 +24,11 @@
       rel="stylesheet"
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
+    <script
+      src="https://kit.fontawesome.com/3401f860a7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/index.css" />
     <title>Ristorante Con Fusion</title>
   </head>
 
@@ -137,6 +140,7 @@
         </div>
       </div>
     </div>
+
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -156,11 +160,8 @@
               <a
                 role="button"
                 class="btn btn-block nav-link btn-warning"
-                data-toggle="tooltip"
-                data-html="true"
-                title="Or Call us at  <br><strong>+852 12345678</strong>"
-                data-placement="bottom"
-                href="#reserveform"
+                data-toggle="modal"
+                data-target="#reserveform"
                 >Reserve Table</a
               >
             </button>
@@ -169,7 +170,224 @@
       </div>
     </header>
 
+    <!-- Reserve Table content -->
+    <div id="reserveform" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="row justify-content-center">
+          <form class="modal-content border rounded" style="overflow: hidden">
+            <div class="bg-white border-bottom d-flex">
+              <h3 class="p-2">Reserver a Table</h3>
+              <div class="d-inline-block p-2 ml-auto">
+                <a
+                  role="button"
+                  class="btn"
+                  data-toggle="modal"
+                  data-target="#reserveform"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </a>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="col-md-2 col-sm-12">Number of Guest</div>
+              <div class="form-group col-md-8">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option"
+                  />
+                  <label class="form-check-label" for="inlineRadio3">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option"
+                  />
+                  <label class="form-check-label" for="inlineRadio3">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio3"
+                    value="option"
+                  />
+                  <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio4"
+                    value="option"
+                  />
+                  <label class="form-check-label" for="inlineRadio3">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio5"
+                    value="option"
+                  />
+                  <label class="form-check-label" for="inlineRadio3">5</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio6"
+                    value="option"
+                  />
+                  <label class="form-check-label" for="inlineRadio3">6</label>
+                </div>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="col-md-2 col-sm-12">Section</div>
+              <div class="form-group col-md-8">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-success active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked>Non Smoking
+                  </label>
+                  <label class="btn btn-danger">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row p-2">
+                <p class="col-sm-12 col-md-2">Date and Time</p>
+                <div class="col-sm-12 col-md-3">
+                  <input type="text" class="form-control" placeholder="Date" />
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <input type="text" class="form-control" placeholder="Time" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row p-2">
+                <div class="col offset-md-2">
+                  <button type="button" class="btn btn-secondary">
+                    <a
+                      role="button"
+                      
+                      data-toggle="modal"
+                      data-target="#reserveform"
+                    >
+                      Cancel
+                    </a>
+                  </button>
+                  <button type="button" class="btn btn-primary">Resever</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
+      <div class="row row-content">
+        <div class="col">
+          <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img
+                  class="d-block img-fluid"
+                  src="img/uthappizza.png"
+                  alt="Uthappizza"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>
+                    Uthappizza <span class="badge badge-danger">HOT</span>
+                    <span class="badge badge-pill badge-default">$4.99</span>
+                  </h2>
+                  <p class="d-none d-sm-block">
+                    A unique combination of Indian Uthappam (pancake) and
+                    Italian pizza, topped with Cerignola olives, ripe vine
+                    cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo
+                    Paneer.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block img-fluid"
+                  src="img/buffet.png"
+                  alt="Uthappizza"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="mt-0">
+                    Weekend Grand Buffet
+                    <span class="badge badge-danger">NEW</span>
+                  </h2>
+                  <p class="d-none d-sm-block">
+                    Featuring mouthwatering combinations with a choice of five
+                    different salads, six enticing appetizers, six main entrees
+                    and five choicest desserts. Free flowing bubbly and soft
+                    drinks. All for just $19.99 per person
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block img-fluid"
+                  src="img/alberto.png"
+                  alt="Alberto Somayya"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class="mt-0">Alberto Somayya</h2>
+                  <h4>Executive Chef</h4>
+                  <p class="d-none d-sm-block">
+                    Award winning three-star Michelin chef with wide
+                    International experience having worked closely with whos-who
+                    in the culinary world, he specializes in creating
+                    mouthwatering Indo-Italian fusion experiences.
+                  </p>
+                </div>
+              </div>
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#mycarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+                <li data-target="#mycarousel" data-slide-to="2"></li>
+              </ol>
+              <a
+                class="carousel-control-prev"
+                href="#mycarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#mycarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 order-sm-last col-md-3">
           <h3>Our Lipsmacking Culinary Creations</h3>
@@ -250,93 +468,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="row row-content align-items-center justify-content-center">
-        <form class="border rounded" style="overflow: hidden">
-          <div class="bg-warning">
-            <h3 class="text-white p-2">Reserver a Table</h3>
-          </div>
-          <div class="row p-2">
-            <div class="col-md-3 col-sm-12">Number of Guest</div>
-            <div class="form-group col-md-8">
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="option"
-                />
-                <label class="form-check-label" for="inlineRadio3">1</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="option"
-                />
-                <label class="form-check-label" for="inlineRadio3">2</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio3"
-                  value="option"
-                />
-                <label class="form-check-label" for="inlineRadio3">3</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio4"
-                  value="option"
-                />
-                <label class="form-check-label" for="inlineRadio3">4</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio5"
-                  value="option"
-                />
-                <label class="form-check-label" for="inlineRadio3">5</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio6"
-                  value="option"
-                />
-                <label class="form-check-label" for="inlineRadio3">6</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="row p-2">
-              <p class="col-sm-12 col-md-3">Date and Time</p>
-              <div class="col-sm-12 col-md-4">
-                <input type="text" class="form-control" placeholder="Date" />
-              </div>
-              <div class="col-sm-12 col-md-4">
-                <input type="text" class="form-control" placeholder="Time" />
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <button type="button" class="btn btn-primary">Resever</button>
-          </div>
-        </form>
       </div>
     </div>
 
