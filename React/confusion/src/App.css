@@ -31,3 +31,11 @@ address{
 .navbar-dark {
     background-color: #512DA8;
 }
+
+.modal.fade {
+    opacity: 1 !important;
+}
+
+.modal-dialog {
+    top: 5em;
+}

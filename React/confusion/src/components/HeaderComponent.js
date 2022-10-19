@@ -17,6 +17,7 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Header extends Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class Header extends Component {
             isNavOpen: false,
             isModalOpen: false,
         };
-        
+
         this.toggleNav = this.toggleNav.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
@@ -46,15 +47,20 @@ class Header extends Component {
 
     handleLogin(event) {
         this.toggleModal();
-        alert("Username: " + this.username.value + " Password: " + this.password.value
-            + " Remember: " + this.remember.checked);
+        alert(
+            "Username: " +
+                this.username.value +
+                " Password: " +
+                this.password.value +
+                " Remember: " +
+                this.remember.checked
+        );
         event.preventDefault();
-
     }
 
     render() {
         return (
-            <div>
+            <>
                 <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
@@ -95,17 +101,14 @@ class Header extends Component {
                                         Contact Us
                                     </NavLink>
                                 </NavItem>
-                                <Nav className="ml-auto" navbar>
-                                    <NavItem>
-                                        <Button
-                                            outline
-                                            onClick={this.toggleModal}
-                                        >
-                                            <span className="fa fa-sign-in fa-lg"></span>{" "}
-                                            Login
-                                        </Button>
-                                    </NavItem>
-                                </Nav>
+                            </Nav>
+                            <Nav className="ml-auto" navbar>
+                                <NavItem>
+                                    <Button outline onClick={this.toggleModal}>
+                                        <span className="fa fa-sign-in fa-lg"></span>{" "}
+                                        Login
+                                    </Button>
+                                </NavItem>
                             </Nav>
                         </Collapse>
                     </div>
@@ -176,7 +179,7 @@ class Header extends Component {
                         </Form>
                     </ModalBody>
                 </Modal>
-            </div>
+            </>
         );
     }
 }
