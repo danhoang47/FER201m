@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-
-import Menu from "./menu";
+import React from "react";
+import Menu from "./Menu";
 import SelectDish from "./SelectDish";
 import { DISHES } from "../shared/dishes";
 import { COMMENTS } from "../shared/comments";
 import { PROMOTIONS } from "../shared/promotions";
 import { LEADERS } from "../shared/leaders";
 import { useState } from "react";
-import Header from "./Header";
+import Header from './Header'
 import Footer from "./Footer";
-import About from "./about";
-import Contact from "./contact/Contact";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./About";
+import Contact from "./Contact";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import { connect } from "react-redux";
+
 const mapStateToProps = (state) => {
   return {
     dishes: state.dishes,
@@ -32,7 +32,7 @@ function Main() {
   const [selectedDish, setSelectedDish] = useState(null);
 
   return (
-    <Router>
+    <>
       <div className="">
         <Header />
       </div>
@@ -61,7 +61,7 @@ function Main() {
         <Route path="/contactus" element={<Contact />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 

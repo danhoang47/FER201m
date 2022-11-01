@@ -1,4 +1,4 @@
-import RenderCard from "./RenderCard";
+import RenderCard from "../RenderCard";
 function Home(props) {
   return (
     <div className="container">

@@ -8,7 +8,7 @@ import {
   Media,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import RenderLeader from "./RenderLeader";
+import RenderLeader from "../RenderLeader";
 
 function About(props) {
   return (

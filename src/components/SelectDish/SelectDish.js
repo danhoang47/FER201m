@@ -1,4 +1,4 @@
-import DishDetail from "./DishDetail";
+import DishDetail from "../DishDetail";
 import { useParams } from "react-router-dom";
 const SelectDish = ({ data }) => {
   const { dishId } = useParams();

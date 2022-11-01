@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React from "react";
 import {
   Card,
   CardImg,
@@ -26,8 +26,8 @@ function Menu({ dishes, setSelectDish }) {
           </div>
         </div>
         <div className="row">
-          {dishes.map((dish) => (
-            <div className="col-12  col-md-5 m-1 text-left font-weight-bold">
+          {dishes.map((dish, index) => (
+            <div className="col-12  col-md-5 m-1 text-left font-weight-bold" key={index}>
               <Card
                 key={dish.id}
                 onClick={() => {
